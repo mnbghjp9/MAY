@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع شخصي احترافي</title>
+    <title>موقع مرجان الشخصي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- إضافة Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">اسمك</div>
+                <div class="logo">MR.MRJAoN</div>
                 <ul class="nav-links">
                     <li><a href="#home">الرئيسية</a></li>
                     <li><a href="#about">من أنا</a></li>
@@ -27,7 +29,7 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>مرحبًا، أنا <span>اسمك</span></h1>
+            <h1>مرحبًا، أنا <span>مرجان</span></h1>
             <p>مطور ويب محترف ومصمم واجهات مستخدم</p>
             <a href="#portfolio" class="btn">أعمالي</a>
         </div>
@@ -55,17 +57,31 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-laptop"></i>
                     </div>
-                    <h3>تطوير الويب</h3>
-                    <p>تطوير مواقع وتطبيقات ويب متكاملة</p>
+                    <h3>صيانة الحاسوب</h3>
+                    <p>صيانة وإصلاح أجهزة الكمبيوتر والأجهزة المحمولة</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-wifi"></i>
                     </div>
-                    <h3>تصميم الويب</h3>
-                    <p>تصميم واجهات مستخدم جذابة</p>
+                    <h3>الإنترنت WiFi</h3>
+                    <p>تركيب وصيانة شبكات الواي فاي والإنترنت</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>بيع وشراء</h3>
+                    <p>خبرة في مجال البيع والشراء والتجارة الإلكترونية</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>باحث علمي وتقني</h3>
+                    <p>بحث وتطوير في مجال التكنولوجيا والتقنيات الحديثة</p>
                 </div>
             </div>
         </div>
@@ -74,8 +90,36 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">معرض الأعمال</h2>
-            <div class="portfolio-grid" id="portfolio-container">
-                <!-- سيتم ملء هذا القسم ديناميكيًا -->
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/project1.jpg" alt="مشروع 1">
+                        <div class="portfolio-overlay">
+                            <h3>مشروع 1</h3>
+                            <p>وصف المشروع الأول</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/project2.jpg" alt="مشروع 2">
+                        <div class="portfolio-overlay">
+                            <h3>مشروع 2</h3>
+                            <p>وصف المشروع الثاني</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/project3.jpg" alt="مشروع 3">
+                        <div class="portfolio-overlay">
+                            <h3>مشروع 3</h3>
+                            <p>وصف المشروع الثالث</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -83,35 +127,52 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">تواصل معي</h2>
-            <form class="contact-form" action="send_email.php" method="POST">
-                <div class="form-group">
-                    <label for="name">الاسم</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">الرسالة</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">إرسال الرسالة</button>
-            </form>
+            <div class="social-links-container">
+                <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/YOUR_PROFILE" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/YOUR_PROFILE" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://t.me/YOUR_USERNAME" target="_blank" class="social-link">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-            <p>&copy; 2025 جميع الحقوق محفوظة</p>
+            <p>&copy; 2025 جميع الحقوق محفوظة لمستر مرجان</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
 </html>
